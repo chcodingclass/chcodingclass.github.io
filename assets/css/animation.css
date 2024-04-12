@@ -1,6 +1,29 @@
-#hero h1 {
-  color: red;
+#hero h1,
+#hero h2 {
+  animation-name: showIt;
+  animation-duration: 5s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+#hero h2 {
+  animation-delay: 2s;
+}
+
+#hero .btn:hover {
+  font-weight: normal;
+  border: 3px solid;
+  animation: 1s border-animate infinite;
 }
 
 @keyframes showIt {
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes border-animate {
+  100% {
+    border-color: brown;
+  }
 }
